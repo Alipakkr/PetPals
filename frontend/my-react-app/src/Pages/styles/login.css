@@ -14,8 +14,8 @@
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("file:///Users/apple/Downloads/WhatsApp%20Image%202024-02-21%20at%2010.02.06.jpeg");
+    background-size: cover; 
+    background-image: url('file:///Users/apple/Downloads/WhatsApp%20Image%202024-02-21%20at%2010.02.06.jpeg');
 }
 
 .login > form input {
