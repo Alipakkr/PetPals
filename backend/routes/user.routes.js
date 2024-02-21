@@ -3,6 +3,7 @@ const userRouter = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { UserModel } = require('../models/user.models');
+const { BlacklistModel } = require('../models/blacklist.model');
 
 
 userRouter.post("/register", async(req, res) => {
@@ -42,15 +43,26 @@ userRouter.post("/login", async (req, res) => {
                 const token = jwt.sign({ userID: user._id, author: user.Name }, "masai", { expiresIn: '7d' });
                 res.send({ "msg": "Login successful!", token });
             } else {
+                console.log(err);
                 res.status(401).send({ "msg": "Wrong Credentials", err });
             }
         });
     } catch (err) {
+        console.log(err);
         res.status(500).send({ "error": err });
     }
 });
 
-
+userRouter.get('/logout', async(req,res)=>{
+    const token = req.headers.authorization?.split(" ")[1];
+    try {
+        const blist = new BlacklistModel({"blockedtoken":token});
+        await blist.save();
+        res.send({"msg":"you have been logged out successfully....."})
+    } catch (error) {
+        res.send({'err':error})
+    }
+})
 
 module.exports = {
     userRouter

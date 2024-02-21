@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const BlacklistSchema = mongoose.Schema({
-    blockedToken:{type:String,required:true}
+    blockedtoken:{type:String,required:true}
 })
 
-const BlacklistModel = mongoose.model('BlacklistTokens',BlacklistSchema);
+const BlacklistModel = mongoose.model('BlacklistToken',BlacklistSchema);
 
 module.exports ={
-    
+    BlacklistModel
 }
