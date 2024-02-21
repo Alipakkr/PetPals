@@ -6,7 +6,7 @@ const { UserModel } = require('../models/user.models');
 
 
 userRouter.post("/register", async(req, res) => {
-    const { Name, email, password, gender, age } = req.body;
+    const { name, email, password, gender, age } = req.body;
     try {
         const userExsist = await UserModel.findOne({email:email})
 
@@ -20,7 +20,7 @@ userRouter.post("/register", async(req, res) => {
 
         bcrypt.hash(password, 8, async (err, hash) => {
             if (hash) {
-                const user = new UserModel({ Name, email, password: hash, gender, age });
+                const user = new UserModel({ name, email, password: hash, gender, age });
                 await user.save();
                 res.send({ "msg": "New user has been registered!" });
             } else {
