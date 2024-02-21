@@ -55,8 +55,24 @@ petsRouter.get('/', auth, async (req, res) => {
 
 });
 
-petsRouter.delete('/remove/:Petid', (req, res) => {
+petsRouter.patch('/update/:Petid', async (req, res) => {
+    const { Petid } = req.params;
+    try {
+        await PetModel.findByIdAndUpdate({ _id: Petid }, req.body);
+        res.send({ "msg": `The note with ID:${Petid} has been updated` });
+    } catch (error) {
+        res.status(500).json({ error: "Internal Server Error" })
+    }
+})
+
+petsRouter.delete('/remove/:Petid', async (req, res) => {
     const Petid = req.params;
+    try {
+        await PetModel.findByIdAndDelete({ _id: Petid });
+        res.send({ "msg": `the note with id ${Petid} is deleted successfully` })
+    } catch (error) {
+        res.status(500).send({ error: "Internal Server Error" })
+    }
 })
 
 module.exports = {
