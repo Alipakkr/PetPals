@@ -44,9 +44,20 @@ petsRouter.post('/add', (req, res) => {
     });
 });
 
-petsRouter.get('/', (req, res) => {
+petsRouter.get('/', async(req, res) => {
+    try {
+        const pets = await PetModel.find();
+        res.send({"pets":pets})
+    } catch (error) {
+        res.send({error})
+    }
     res.send({ "msg": "getting all the pets" })
+
 });
+
+petsRouter.delete('/remove/:Petid',(req,res)=>{
+    const Petid = req.params;
+})
 
 module.exports = {
     petsRouter
