@@ -3,6 +3,7 @@ const { PetModel } = require('../models/pets.model');
 
 const petsRouter = express.Router();
 const multer = require('multer');
+const { auth } = require('../middlewares/auth.middleware');
 
 const Storage = multer.diskStorage({
     destination: 'petimages',
@@ -10,12 +11,11 @@ const Storage = multer.diskStorage({
         cb(null, file.originalname);
     }
 });
-
 const upload = multer({
     storage: Storage
 }).single('image');
 
-petsRouter.post('/add', (req, res) => {
+petsRouter.post('/add', auth, (req, res) => {
     upload(req, res, async (err) => {
         try {
             if (err) {
@@ -44,18 +44,18 @@ petsRouter.post('/add', (req, res) => {
     });
 });
 
-petsRouter.get('/', async(req, res) => {
+petsRouter.get('/', auth, async (req, res) => {
     try {
         const pets = await PetModel.find();
-        res.send({"pets":pets})
+        res.send({ "pets": pets })
     } catch (error) {
-        res.send({error})
+        res.send({ error })
     }
     res.send({ "msg": "getting all the pets" })
 
 });
 
-petsRouter.delete('/remove/:Petid',(req,res)=>{
+petsRouter.delete('/remove/:Petid', (req, res) => {
     const Petid = req.params;
 })
 
