@@ -43,10 +43,12 @@ userRouter.post("/login", async (req, res) => {
                 const token = jwt.sign({ userID: user._id, author: user.Name }, "masai", { expiresIn: '7d' });
                 res.send({ "msg": "Login successful!", token });
             } else {
+                console.log(err);
                 res.status(401).send({ "msg": "Wrong Credentials", err });
             }
         });
     } catch (err) {
+        console.log(err);
         res.status(500).send({ "error": err });
     }
 });
