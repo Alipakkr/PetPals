@@ -6,7 +6,8 @@ const petSchema = mongoose.Schema({
     gender: { type: String, required: true },
     price: { type: Number, required: true },
     age: { type: Number, required: true },
-    about: { type: String, required: true }
+    about: { type: String, required: true },
+    image: { data: Buffer, contentType: String }
 }, {
     versionKey: false
 })
