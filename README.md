@@ -1,7 +1,7 @@
 # Project Title
 
 ## Introduction
-A brief introduction of your project goes here. You may want to cover the purpose of your project, its core functionality, and what problems it solves.
+Welcome to our Pet Adoption Website, where the journey to find your perfect furry companion begins. We've created a platform dedicated to connecting loving homes with deserving animals, all while supporting and empowering animal welfare organizations.
 
 ## Project Type
 Frontend | Backend | Fullstack
@@ -24,11 +24,12 @@ Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
 Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
 
 ## Features
-List out the key features of your application.
-
-- Feature 1
-- Feature 2
-- Feature 3
+Features
+-  Pet Searches: Explore a diverse range of adorable pets ready to become a part of your family.
+-  User Accounts: Create personalized profiles to track your favorite pets, adoption history, and preferences.
+-  Wish Lists: Save and organize your desired pets, making it easier to find your ideal match.
+-  Adoption Requests: Initiate adoption requests seamlessly and efficiently, ensuring a smooth and caring process.
+-  Admin Controls: Empower organizations with robust admin controls for effective management and coordination.
 
 ## design decisions or assumptions
 List your design desissions & assumptions
@@ -69,4 +70,8 @@ List and provide a brief overview of the technologies used in the project.
 - Node.js
 - Express.js
 - MongoDB
-- Other libraries/modules
+- Chakra-UI
+- Redux
+- React.js
+- Tailwind
+- Json-Server
