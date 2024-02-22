@@ -47,7 +47,7 @@ petsRouter.post('/add', auth, (req, res) => {
 
 petsRouter.get("/get", async (req, res) => {
     try {
-        const { q, gender, age, color, sortBy, sortOrder, page, limit } = req.query;
+        const { q, gender, age, color, sortBy, breed, sortOrder, page, limit, pettype } = req.query;
 
         const filter = {};
 
@@ -66,10 +66,13 @@ petsRouter.get("/get", async (req, res) => {
             filter.age = age;
         }
         if (color) {
-            filter.color = { $in: color }; // Use $in to match multiple color values
+            filter.color = { $in: color };
         }
-        if (petType) {
-            filter.pettype = { $regex: petType, $options: "i" };
+        if (pettype) {
+            filter.pettype = { $regex: pettype, $options: "i" };
+        }
+        if (breed) {
+            filter.breed = { $regex: breed, $options: "i" }
         }
 
         let sort = {};
@@ -88,22 +91,23 @@ petsRouter.get("/get", async (req, res) => {
 
         const totalPetsCount = await PetModel.countDocuments(filter);
 
-        res.json({ cats: petsData, totalCount: totalPetsCount });
+        res.json({ pets: petsData, totalCount: totalPetsCount });
     } catch (error) {
+        console.log(error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
 
-petsRouter.get('/', auth, async (req, res) => {
-    try {
-        const pets = await PetModel.find();
-        res.send({ "pets": pets })
-    } catch (error) {
-        res.send({ error })
-    }
-    res.send({ "msg": "getting all the pets" })
+// petsRouter.get('/', auth, async (req, res) => {
+//     try {
+//         const pets = await PetModel.find();
+//         res.send({ "pets": pets })
+//     } catch (error) {
+//         res.send({ error })
+//     }
+//     res.send({ "msg": "getting all the pets" })
 
-});
+// });
 
 petsRouter.patch('/update/:Petid', async (req, res) => {
     const { Petid } = req.params;
