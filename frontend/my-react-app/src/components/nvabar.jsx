@@ -31,7 +31,7 @@ function NavBar() {
     
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-yellow-500 bg-cyan-900 fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-yellow-500 bg-cyan-900">
       <div>
         <h1 className="text-5xl font-signature">Pat-Pals</h1>
       </div>
