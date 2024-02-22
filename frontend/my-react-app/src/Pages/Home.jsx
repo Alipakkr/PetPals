@@ -6,12 +6,9 @@ import Banner from "../components/Banner";
 
 function Home() {
   return (
-    <div name="home" className="max-h-40 my-2.5" >
-      {/* <div className="min-h-52  "></div> */}
-      <br />
-      <br />
-      <br />
-      <br />
+    <div name="home" className="max-h-40 " >
+      <div className="min-h-48  "></div>
+      
       <Banner />
     </div>
   );
