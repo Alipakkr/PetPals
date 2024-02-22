@@ -1,4 +1,4 @@
-# Project Title
+# PetPals: Pet Adoption and Care Platform
 
 ## Introduction
 Welcome to our Pet Adoption Website, where the journey to find your perfect furry companion begins. We've created a platform dedicated to connecting loving homes with deserving animals, all while supporting and empowering animal welfare organizations.
