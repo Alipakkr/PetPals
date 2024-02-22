@@ -15,8 +15,8 @@ const Petadoption = () => {
                             Filter By
                         </span>
                     </h2>
-                    <div className="filter-item">
                     <div className="hr"></div>
+                    <div className="filter-item">
                         <p>Gender</p>
                         <div className="filter-inn">
                             <label>
@@ -30,8 +30,8 @@ const Petadoption = () => {
                             </label>
                         </div>
                     </div>
-                    <div className="filter-item">
                     <div className="hr"></div>
+                    <div className="filter-item">
                         <p>Color</p>
                         <div className="filter-inn">
                             <label>
@@ -50,8 +50,8 @@ const Petadoption = () => {
                             </label>
                         </div>
                     </div>
-                    <div className="filter-item">
                     <div className="hr"></div>
+                    <div className="filter-item">
                         <p>Size</p>
                         <div className="filter-inn">
                             <label>
