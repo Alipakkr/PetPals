@@ -1,0 +1,49 @@
+.adopt-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adoption-container {
+    display: flex;
+    width: 97%;
+    border: 1px solid;
+    padding: 2% 0;
+}
+
+.filtering-part {
+    border: 1px solid;
+    width: 18%;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.filter-item>p {
+    font-size: 20px;
+    text-align: center;
+}
+.filter-item{
+    padding: 2% 0;
+}
+
+.filter-header-icon-text {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    justify-content: center;
+}
+
+.filter-header-icon-text>span:nth-child(2) {
+    font-size: 30px;
+}
+
+.filter-icon {
+    font-size: 32px;
+}
+
+.hr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+}

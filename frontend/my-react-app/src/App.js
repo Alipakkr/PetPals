@@ -12,9 +12,8 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-          <MainRoutes />
           <NavBar />
-          <Home />
+          <MainRoutes />
         </div>
       </BrowserRouter>
     </Provider>
