@@ -8,6 +8,7 @@ const petSchema = mongoose.Schema({
     pettype:{type:String,required:true},
     age: { type: Number, required: true },
     about: { type: String, required: true },
+    color:{type:String,required:true},
     image: { data: Buffer, contentType: String }
 }, {
     versionKey: false

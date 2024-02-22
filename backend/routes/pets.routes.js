@@ -45,16 +45,69 @@ petsRouter.post('/add', auth, (req, res) => {
     });
 });
 
-petsRouter.get('/', auth, async (req, res) => {
+petsRouter.get("/get", async (req, res) => {
     try {
-        const pets = await PetModel.find();
-        res.send({ "pets": pets })
-    } catch (error) {
-        res.send({ error })
-    }
-    res.send({ "msg": "getting all the pets" })
+        const { q, gender, age, color, sortBy, breed, sortOrder, page, limit, pettype } = req.query;
 
+        const filter = {};
+
+        // Apply search filters if provided
+        if (q) {
+            filter.$or = [
+                { gender: { $regex: q, $options: "i" } },
+                { color: { $regex: q, $options: "i" } },
+            ];
+        }
+
+        if (gender) {
+            filter.gender = { $regex: gender, $options: "i" };
+        }
+        if (age) {
+            filter.age = age;
+        }
+        if (color) {
+            filter.color = { $in: color };
+        }
+        if (pettype) {
+            filter.pettype = { $regex: pettype, $options: "i" };
+        }
+        if (breed) {
+            filter.breed = { $regex: breed, $options: "i" }
+        }
+
+        let sort = {};
+        if (sortBy && sortOrder) {
+            sort = { [sortBy]: sortOrder === "asc" ? 1 : -1 };
+        }
+
+        const pageNumber = parseInt(page) || 1;
+        const pageSize = parseInt(limit) || 10;
+        const skip = (pageNumber - 1) * pageSize;
+
+        const petsData = await PetModel.find(filter)
+            .sort(sort)
+            .skip(skip)
+            .limit(pageSize);
+
+        const totalPetsCount = await PetModel.countDocuments(filter);
+
+        res.json({ pets: petsData, totalCount: totalPetsCount });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
 });
+
+// petsRouter.get('/', auth, async (req, res) => {
+//     try {
+//         const pets = await PetModel.find();
+//         res.send({ "pets": pets })
+//     } catch (error) {
+//         res.send({ error })
+//     }
+//     res.send({ "msg": "getting all the pets" })
+
+// });
 
 petsRouter.patch('/update/:Petid', async (req, res) => {
     const { Petid } = req.params;
