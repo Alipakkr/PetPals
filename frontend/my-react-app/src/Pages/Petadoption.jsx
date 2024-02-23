@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/adoption.css'
+import Petcards from '../components/Petcards'
 
 
 const Petadoption = () => {
@@ -99,7 +100,7 @@ const Petadoption = () => {
                     </div>
                 </div>
                 <div className="displaying-part">
-                    
+                    <Petcards/>
                 </div>
             </div>
         </div>
