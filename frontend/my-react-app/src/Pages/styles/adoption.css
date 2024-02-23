@@ -12,7 +12,9 @@
 }
 
 .filtering-part {
-    border: 1px solid;
+    /* border: 1px solid; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
     width: 18%;
 }
 
@@ -25,16 +27,19 @@ h2 {
     font-size: 20px;
     text-align: center;
 }
-.filter-item{
+
+.filter-item {
     padding: 2% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.filter-inn{
+
+.filter-inn {
     width: 70%;
     /* border: 1px solid; */
 }
+
 .filter-header-icon-text {
     display: flex;
     align-items: center;
@@ -51,5 +56,9 @@ h2 {
 }
 
 .hr {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.441);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.258);
+}
+
+.filter-inn>label>input {
+    margin-right: 2%;
 }

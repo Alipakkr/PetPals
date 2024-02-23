@@ -71,6 +71,32 @@ const Petadoption = () => {
 
                         </div>
                     </div>
+                    <div className="hr"></div>
+                    <div className="filter-item">
+                        <p>Pet Type</p>
+                        <div className="filter-inn">
+                            <label>
+                                <input type="checkbox" name="myCheckbox" id="myCheckbox" />
+                                Dogs
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox" name="myCheckbox" id="myCheckbox" />
+                                Cats
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox" name="myCheckbox" id="myCheckbox" />
+                                Rabbits
+                            </label>
+                            <br />
+                            <label>
+                                <input type="checkbox" name="myCheckbox" id="myCheckbox" />
+                                Birds
+                            </label>
+                            <br />
+                        </div>
+                    </div>
                 </div>
                 <div className="displaying-part"></div>
             </div>
