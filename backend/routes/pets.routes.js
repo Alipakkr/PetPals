@@ -101,6 +101,16 @@ petsRouter.get("/get", async (req, res) => {
 //     res.send({ "msg": "getting all the pets" })
 
 // });
+petsRouter.get('/get/:petId',async(req,res)=>{
+    const petId = req.params.petId;
+    try {
+        const pet = await PetModel.findOne({_id:petId});
+        res.send({"data":pet})
+    } catch (error) {
+        console.log(error);
+        res.send({"msg":error})
+    }
+})
 
 petsRouter.patch('/update/:Petid', async (req, res) => {
     const { Petid } = req.params;
