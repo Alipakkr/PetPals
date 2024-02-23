@@ -7,7 +7,7 @@ import { fetchPets } from '../Redux/action';
 
 
 const Petadoption = () => {
-    const store = useSelector((store) => store);
+    const store = useSelector((store) => store.pets);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchPets());
@@ -110,7 +110,12 @@ const Petadoption = () => {
                     </div>
                 </div>
                 <div className="displaying-part">
-                    <Petcards para={store.pets}/>
+                    {/* <pre>{JSON.stringify(store.pets, null, 2)}</pre> */}
+                    {
+                        store.map((ele) => {
+                            return <Petcards para={ele} />
+                        })
+                    }
                 </div>
             </div>
         </div>

@@ -16,7 +16,8 @@
     /* border: 1px solid; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
-    width: 18%;
+    width: 20%;
+    height: fit-content;
 }
 
 h2 {
@@ -62,4 +63,12 @@ h2 {
 
 .filter-inn>label>input {
     margin-right: 2%;
+}
+.displaying-part{
+    /* border: 1px solid; */
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 2%;
+    row-gap: 20px;
 }

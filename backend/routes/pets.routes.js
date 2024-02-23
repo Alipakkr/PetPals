@@ -74,7 +74,8 @@ petsRouter.get("/get", async (req, res) => {
         }
 
         const pageNumber = parseInt(page) || 1;
-        const pageSize = parseInt(limit) || 10;
+        const totalPetsCount = await PetModel.countDocuments(filter);
+        const pageSize = parseInt(limit) || totalPetsCount;
         const skip = (pageNumber - 1) * pageSize;
 
         const petsData = await PetModel.find(filter)
@@ -82,7 +83,6 @@ petsRouter.get("/get", async (req, res) => {
             .skip(skip)
             .limit(pageSize);
 
-        const totalPetsCount = await PetModel.countDocuments(filter);
 
         res.json({ pets: petsData, totalCount: totalPetsCount });
     } catch (error) {
