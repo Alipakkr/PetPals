@@ -1,0 +1,22 @@
+.adopt{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.dogs_box{
+    display: flex;
+    /* border: 1px solid red; */
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    
+
+}
+
+.dogs_box img{
+    padding: 5px;
+}
+
+.learn{
+    padding: 5px;
+}
