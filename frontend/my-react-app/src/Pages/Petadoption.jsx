@@ -98,7 +98,9 @@ const Petadoption = () => {
                         </div>
                     </div>
                 </div>
-                <div className="displaying-part"></div>
+                <div className="displaying-part">
+                    
+                </div>
             </div>
         </div>
     )
