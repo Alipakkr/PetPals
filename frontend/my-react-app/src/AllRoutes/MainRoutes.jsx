@@ -4,7 +4,6 @@ import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
 import Petadoption from '../Pages/Petadoption'
 import Home from '../Pages/Home'
-import Form from '../components/Form'
 
 const MainRoutes = () => {
   return (
@@ -17,5 +16,4 @@ const MainRoutes = () => {
     </Routes>
   )
 }
-
 export default MainRoutes
