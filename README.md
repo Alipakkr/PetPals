@@ -8,7 +8,7 @@ Frontend | Backend | Fullstack
 
 ## Deplolyed App
 Frontend: https://deployed-site.whatever
-Backend: https://deployed-site.whatever
+Backend: https://petpals-2z52.onrender.com
 Database: https://deployed-site.whatever
 
 ## Directory Structure
