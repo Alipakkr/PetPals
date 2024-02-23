@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles/petcard.css'
-const Petcards = () => {
+const Petcards = ({para}) => {
   return (
     <div className="pet-card">
         <div className="pet-card-inn">
