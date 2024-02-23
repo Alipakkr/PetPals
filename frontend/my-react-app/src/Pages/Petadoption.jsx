@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './styles/adoption.css'
 import Petcards from '../components/Petcards'
+// import { get } from 'react-scroll/modules/mixins/scroller'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPets } from '../Redux/action';
 
 
 const Petadoption = () => {
+    const store = useSelector(store => store);
+    console.log(store);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchPets)
+        console.log("working");
+    }, [])
     return (
         <div className="adopt-main-container">
             <div className="adoption-container">
@@ -100,7 +110,7 @@ const Petadoption = () => {
                     </div>
                 </div>
                 <div className="displaying-part">
-                    <Petcards/>
+                    <Petcards />
                 </div>
             </div>
         </div>
