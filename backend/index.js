@@ -10,6 +10,7 @@ const port = process.env.port || 4500;
 
 
 app.use(express.json());
+app.use(cors())
 app.use('/users',userRouter);
 app.use('/pets',petsRouter);
 
