@@ -22,15 +22,16 @@ petsRouter.post('/add', auth, (req, res) => {
                 throw new Error('Error uploading image');
             }
 
-            const { petname, breed, gender, price, age, pettype, about } = req.body;
+            const { name, breed, gender, price, age, pettype, about,color } = req.body;
             const pet = new PetModel({
-                petname,
+                name,
                 breed,
                 gender,
                 price,
                 age,
                 pettype,
                 about,
+                color,
                 image: {
                     data: req.file.filename,
                     contentType: 'image/png'
