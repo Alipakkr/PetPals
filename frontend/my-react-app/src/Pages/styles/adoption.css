@@ -18,10 +18,10 @@
     width: 18%;
 }
 
-/* h2 {
+h2 {
     font-size: 30px;
     font-weight: 600;
-} */
+}
 
 .filter-item>p {
     font-size: 20px;
@@ -48,7 +48,7 @@
 }
 
 .filter-header-icon-text>span:nth-child(2) {
-    /* font-size: 30px; */
+    font-size: 30px;
 }
 
 .filter-icon {
