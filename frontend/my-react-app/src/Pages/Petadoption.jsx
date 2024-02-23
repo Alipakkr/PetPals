@@ -7,13 +7,13 @@ import { fetchPets } from '../Redux/action';
 
 
 const Petadoption = () => {
-    // const store = useSelector((store) => store);
+    const store = useSelector((store) => store);
     const dispatch = useDispatch();
     useEffect(() => {
-        // console.log(store);
         dispatch(fetchPets());
         console.log("working");
     }, [dispatch])
+    console.log(store);
     return (
         <div className="adopt-main-container">
             <div className="adoption-container">
@@ -110,7 +110,7 @@ const Petadoption = () => {
                     </div>
                 </div>
                 <div className="displaying-part">
-                    <Petcards />
+                    <Petcards para={store.pets}/>
                 </div>
             </div>
         </div>

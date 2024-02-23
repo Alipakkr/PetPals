@@ -9,7 +9,7 @@ const petSchema = mongoose.Schema({
     age: { type: String, required: true },
     about: { type: String, required: true },
     color: { type: String, required: true },
-    image: { data: Buffer, contentType: String }
+    image: { type: String, required: true }
 }, {
     versionKey: false
 })

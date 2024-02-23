@@ -15,35 +15,27 @@ const upload = multer({
     storage: Storage
 }).single('image');
 
-petsRouter.post('/add', auth, (req, res) => {
-    upload(req, res, async (err) => {
-        try {
-            if (err) {
-                throw new Error('Error uploading image');
-            }
+petsRouter.post('/add', auth, async (req, res) => {
+    const { name, breed, gender, price, age, pettype, about, color,image } = req.body;
+    try {
 
-            const { name, breed, gender, price, age, pettype, about,color } = req.body;
-            const pet = new PetModel({
-                name,
-                breed,
-                gender,
-                price,
-                age,
-                pettype,
-                about,
-                color,
-                image: {
-                    data: req.file.filename,
-                    contentType: 'image/png'
-                }
-            });
-            await pet.save();
-            res.send({ "msg": "New pet is added successfully" });
-        } catch (error) {
-            console.log(err);
-            res.status(500).send({ "msg": "Facing error while adding the pet", "error": err });
-        }
-    });
+        const pet = new PetModel({
+            name,
+            breed,
+            gender,
+            price,
+            age,
+            pettype,
+            about,
+            color,
+            image
+        });
+        await pet.save();
+        res.send({ "msg": "New pet is added successfully" });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({ "msg": "Facing error while adding the pet", "error": error });
+    }
 });
 
 petsRouter.get("/get", async (req, res) => {
