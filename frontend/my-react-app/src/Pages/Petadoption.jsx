@@ -7,13 +7,13 @@ import { fetchPets } from '../Redux/action';
 
 
 const Petadoption = () => {
-    const store = useSelector(store => store);
-    console.log(store);
+    // const store = useSelector((store) => store);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(fetchPets)
+        // console.log(store);
+        dispatch(fetchPets());
         console.log("working");
-    }, [])
+    }, [dispatch])
     return (
         <div className="adopt-main-container">
             <div className="adoption-container">
