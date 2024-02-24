@@ -1,75 +1,34 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import {Link} from 'react-scroll'
-function NavBar() {
-  const [nav, setnav] = useState(false);
-  const link = [
-    {
-      id: "home",
-      link: "home",
-    },
-    {
-      id: "about",
-      link: "about",
-    },
-    {
-      id: "cat",
-      link: "cat",
-    },
-    {
-      id: "dog",
-      link: "dog",
-    },
-    {
-      id: 'adoption',
-      link: "adoption",
-    },
-    {
-      id: "contact",
-      link: "contact",
-    },
-    
-  ];
-  return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-yellow-500 bg-cyan-900">
-      <div>
-        <h1 className="text-5xl font-signature">Pat-Pals</h1>
-      </div>
-      <ul className=" hidden md:flex">
-        {link.map((link) => (
-          <li
-            key={link.id}
-            className="px-4 cursor-pointer capitalize font-medium text-yellow-500 hover:scale-105 duration-200"
-          >
-            
-            <Link to={link.id} smooth duration={500}>{link.link}</Link>
-          </li>
-        ))}
-      </ul>
+import "./styles/Navbar.css";
+import petlogo from "../Assests/petlogo.png";
+import cart_icon from "../Assests/cart_icon.png"
+import { Link } from "react-router-dom";
 
-      <div
-        onClick={() => setnav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-yellow-500 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+
+export const Navbar = () => {
+
+  const [menu,setMenu]=useState("home")
+  return (
+    // style={{ position: "sticky", top: 0, zIndex: 1000 }} make sticky nav
+    <div className="navbar" >
+      <div className="nav-logo">
+        <img src={petlogo} alt="petlogo"/>
+        <p>PETPALS</p>
       </div>
-      {nav && (
-        <ul
-          className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b 
-        from-black to-gray-800 text-yellow-500"
-        >
-          {link.map(({id,link}) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize text-4xl py-6 "
-            >
-               <Link  onClick={()=>setnav(!nav)} to={id} smooth duration={500}>{link}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className="nav-manu">
+        <li onClick={()=>{setMenu("home")}}> <Link style={{textDecoration:"none"}}to='/' smooth duration={500}>Home</Link>{menu==="home"?<hr />:<></>}</li>
+        <li onClick={()=>{setMenu("dog")}}> <Link style={{textDecoration:"none"}} to='/dog' smooth duration={500}>Dog</Link >{menu==="dog"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("cat")}}> <Link style={{textDecoration:"none"}} to='/cat' smooth duration={500}>Cat</Link >{menu==="cat"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("about")}}><Link style={{textDecoration:"none"}}to="/about" smooth duration={500}>About</Link> {menu==="about"?<hr />:<></>}</li>
+        <li onClick={()=>{setMenu("adopt")}}>Adopt {menu==="adopt"?<hr />:<></>}</li>
+        <li onClick={()=>{setMenu("contect")}}><Link style={{textDecoration:"none"}}to="/contact" smooth duration={500}>Contact</Link> {menu==="contect"?<hr />:<></>}</li>
+      </ul>
+      <div className="nav-login-cart">
+        <Link to="/login"><button>Login</button></Link>
+        <Link to='/cart'><img src={cart_icon} alt="cart-icon" /></Link>
+        <div className="nav-cart-count">0</div>
+      </div>
     </div>
   );
-}
+};
 
-export default NavBar;
