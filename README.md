@@ -7,15 +7,15 @@ Welcome to our Pet Adoption Website, where the journey to find your perfect furr
 Frontend | Backend | Fullstack
 
 ## Deplolyed App
-Frontend: https://deployed-site.whatever
-Backend: https://petpals-2z52.onrender.com
-Database: https://deployed-site.whatever
+- Frontend: https://deployed-site.whatever
+- Backend: https://petpals-2z52.onrender.com
+- Database: https://deployed-site.whatever
 
 ## Directory Structure
 my-app/
-├─ backend/
-├─ frontend/
-│  ├─ ...
+ - ├─ backend/
+ - ├─ frontend/
+ - ├─ ...
 
 ## Video Walkthrough of the project
 Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
@@ -50,7 +50,6 @@ Provide instructions and examples on how to use your project.
 # Example
 ```
 
-Include screenshots as necessary.
 
 ## Credentials
 Provide user credentials for autheticated pages
@@ -65,8 +64,6 @@ POST /api/items - create a new item
 
 
 ## Technology Stack
-List and provide a brief overview of the technologies used in the project.
-
 - Node.js
 - Express.js
 - MongoDB
@@ -75,3 +72,20 @@ List and provide a brief overview of the technologies used in the project.
 - React.js
 - Tailwind
 - Json-Server
+
+## Team Members 
+### Alipa(Team Lead )
+[![profile](https://img.shields.io/badge/Github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Alipakkr)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alipa-55b365285/)
+
+### M Laxminarayan Reddy
+[![profile](https://img.shields.io/badge/Github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/imlnr)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alipa-55b365285/)
+
+### Nirmal Patel 
+[![profile](https://img.shields.io/badge/Github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/nirmalpatel26)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alipa-55b365285/)
+
