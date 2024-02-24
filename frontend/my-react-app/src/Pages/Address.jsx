@@ -48,18 +48,18 @@ const Address = () => {
 
 
       <div id="orderSummary">
-        <h1>Hotel Booking <span id="totalitem"></span></h1>
+        <h1>Pet Adoption <span id="totalitem"></span></h1>
         <div>
-          <p className="gray">One Night charge</p>
-          <p id="totalmrp">$220/person</p>
+          <p className="gray">Adoption Charge</p>
+          <p id="totalmrp">$0</p>
         </div>
         <div>
-          <p className="gray">Days</p>
-          <p id="payday">3 * 220$</p>
+          <p className="gray">Delivery Charges *</p>
+          <p id="payday">220$</p>
         </div>
         <div>
           <p className="gray">Total Discounts</p>
-          <p id="totaldiscount" className="green">Null</p>
+          <p id="totaldiscount" className="green">0%</p>
         </div>
         <hr />
         <div>
@@ -67,7 +67,8 @@ const Address = () => {
           <h2 id="paytm"> $660 </h2>
         </div>
         <hr />
-        <h2 style={{ color: 'deepskyblue' }}>Press Confirm for payment.</h2>
+        <button style={{color:'black',borderRadius:'8px',backgroundColor:'violet',padding:'0% 2%'}}>Confirm Payment</button>
+        {/* <h2 style={{ color: 'deepskyblue' }}></h2> */}
       </div>
     </div>
   );
