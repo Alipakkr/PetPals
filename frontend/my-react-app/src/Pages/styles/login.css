@@ -8,23 +8,26 @@
     align-items: center;
     text-align: center;
 }
-.login-container{
+
+.login-container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-image: url('file:///Users/apple/Downloads/WhatsApp%20Image%202024-02-21%20at%2010.02.06.jpeg');
+    background-size: cover;
+    background-image: url('https://t3.ftcdn.net/jpg/06/17/02/08/360_F_617020806_eb8acQoO9IxsOMVpAtJNs79hvfyimFJt.jpg');
 }
-
-.login > form input {
+.login>form>h1{
+    font-size: 25px;
+}
+.login>form input {
     border-radius: 20px;
     border: 2px solid lightgrey;
     outline: none;
     color: #1d2129;
     margin: 2% 0;
-   width: 90%;
+    width: 90%;
     padding: 12px;
     font-size: 16px;
 }
@@ -39,6 +42,7 @@
     margin: 1rem;
     width: 90%;
 }
+
 .error {
     color: red;
     text-align: left;
