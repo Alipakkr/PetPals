@@ -9,6 +9,7 @@ const Singlepet = () => {
     const { petid } = useParams();
     const navigate = useNavigate();
     console.log(petid);
+    const propdata = useSelector((store)=> store.pet);
     const state = useSelector((store) => store.pet);
     console.log(state);
     const loading = useSelector((store) => store.isLoading);
@@ -17,7 +18,7 @@ const Singlepet = () => {
         dispatch(GetSingleData(petid))
     }, [petid]);
     const handleClick = ()=>{
-        navigate('/address');
+        navigate('/address',{state:propdata});
     }
     return (
         <div className='main-ind-pet'>
