@@ -16,7 +16,7 @@ const upload = multer({
 }).single('image');
 
 petsRouter.post('/add', auth, async (req, res) => {
-    const { name, breed, gender, price, age, pettype, about, color,image } = req.body;
+    const { name, breed, gender, price, age, pettype, about, color, image } = req.body;
     try {
 
         const pet = new PetModel({
@@ -53,8 +53,8 @@ petsRouter.get("/get", async (req, res) => {
         }
 
         if (gender) {
-            filter.gender = { $regex: gender, $options: "i" };
-        }
+            filter.gender = gender;
+        }        
         if (age) {
             filter.age = age;
         }
@@ -101,14 +101,14 @@ petsRouter.get("/get", async (req, res) => {
 //     res.send({ "msg": "getting all the pets" })
 
 // });
-petsRouter.get('/get/:petId',async(req,res)=>{
+petsRouter.get('/get/:petId', async (req, res) => {
     const petId = req.params.petId;
     try {
-        const pet = await PetModel.findOne({_id:petId});
-        res.send({"data":pet})
+        const pet = await PetModel.findOne({ _id: petId });
+        res.send({ "data": pet })
     } catch (error) {
         console.log(error);
-        res.send({"msg":error})
+        res.send({ "msg": error })
     }
 })
 
