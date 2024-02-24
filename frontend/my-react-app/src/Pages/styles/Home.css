@@ -1,0 +1,127 @@
+.adopt{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.dogs_box{
+    display: flex;
+    /* border: 1px solid red; */
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    
+
+}
+
+.dogs_box img{
+    padding: 5px;
+}
+
+.learn{
+    padding: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: auto;
+    margin-top: 100px;
+    
+    background: linear-gradient(180deg, #ccb2ce, #171b1822 60%);
+    justify-content: center;
+    /* padding: 200px; */
+
+}
+
+.box {
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    
+
+}
+
+.box img{
+    height: 95%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box h3{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 2px;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(96, 96, 222);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.learnbox{
+    margin-top: 100px;
+
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+.learnbox h3{
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+    color: #f38e4f;
+}
+
+.learnbox button{
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+    border: 3px solid #f38e4f;
+    
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.learnbox img{
+    border-radius:20px ;
+}
+
+.maindiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.boxdiv{
+    text-align: center;
+    width: 30%;
+    
+}
+
+.boxdiv p{
+    color: #474645;
+}
+
+.boxdiv button{
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+    border: 3px solid #f38e4f;
+    
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
