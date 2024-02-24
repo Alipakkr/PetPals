@@ -3,7 +3,7 @@ import './App.css';
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import MainRoutes from './AllRoutes/MainRoutes';
-import NavBar from './components/nvabar';
+import {Navbar} from './components/Navbar';
 import Home from './Pages/Home';
 import { store } from './Redux/store';
 
@@ -12,7 +12,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-          <NavBar />
+          <Navbar />
           <MainRoutes />
         </div>
       </BrowserRouter>
