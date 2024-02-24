@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles/Navbar.css";
+import "./styles/navbar.css";
 import petlogo from "../Assests/petlogo.png";
 import cart_icon from "../Assests/cart_icon.png"
 import { Link } from "react-router-dom";
@@ -9,7 +9,6 @@ export const Navbar = () => {
 
   const [menu,setMenu]=useState("home")
   return (
-    // style={{ position: "sticky", top: 0, zIndex: 1000 }} make sticky nav
     <div className="navbar" >
       <div className="nav-logo">
         <img src={petlogo} alt="petlogo"/>
