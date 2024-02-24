@@ -37,3 +37,7 @@
     width: 80%;
     background-color: violet;
 }
+.age-gender>div>p:nth-child(1), .petname{
+    font-weight: bold;
+    font-size: 19px;
+}

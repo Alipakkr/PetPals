@@ -4,15 +4,6 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
 import { Hero } from "../components/hero/Hero";
-import {
-  Box,
-  Button,
-  ChakraProvider,
-  Heading,
-  Stack,
-  Text,
-  Input,
-} from "@chakra-ui/react";
 import "./styles/Home.css";
 
 function Home() {
