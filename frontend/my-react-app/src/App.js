@@ -4,7 +4,6 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import MainRoutes from './AllRoutes/MainRoutes';
 import {Navbar} from './components/Navbar';
-import Home from './Pages/Home';
 import { store } from './Redux/store';
 
 function App() {

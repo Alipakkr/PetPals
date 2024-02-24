@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles/Navbar.css";
-import petlogo from "../Assests/petlogo.png";
+import petlogo from "../Assests/petlogonew.png";
 import cart_icon from "../Assests/cart_icon.png"
 import { Link } from "react-router-dom";
 
@@ -28,6 +28,8 @@ export const Navbar = () => {
         <Link to='/cart'><img src={cart_icon} alt="cart-icon" /></Link>
         <div className="nav-cart-count">0</div>
       </div>
+
+      
     </div>
   );
 };
