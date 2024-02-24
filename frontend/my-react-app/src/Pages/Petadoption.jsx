@@ -4,10 +4,12 @@ import Petcards from '../components/Petcards'
 // import { get } from 'react-scroll/modules/mixins/scroller'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPets } from '../Redux/action';
+import Loading from '../components/Loading';
 
 
 const Petadoption = () => {
     const store = useSelector((store) => store.pets);
+    const isloading = useSelector((store) => store.isLoading);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchPets());
@@ -109,14 +111,19 @@ const Petadoption = () => {
                         </div>
                     </div>
                 </div>
-                <div className="displaying-part">
-                    {/* <pre>{JSON.stringify(store.pets, null, 2)}</pre> */}
+                <div className='disp'>
                     {
-                        store.map((ele) => {
-                            return <Petcards para={ele} />
-                        })
+                        isloading ? <Loading /> :
+                            <div className="displaying-part">
+                                {
+                                    store.map((ele) => {
+                                        return <Petcards para={ele} />
+                                    })
+                                }
+                            </div>
                     }
                 </div>
+
             </div>
         </div>
     )

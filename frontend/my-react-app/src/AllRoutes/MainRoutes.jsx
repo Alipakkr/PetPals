@@ -6,6 +6,7 @@ import Petadoption from '../Pages/Petadoption'
 import Home from '../Pages/Home'
 import Payments from '../Pages/Payments'
 import Petcards from '../components/Petcards'
+import Loading from '../components/Loading'
 
 const MainRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const MainRoutes = () => {
       <Route path='/pet-adoption' element={<Petadoption/>}/>
       <Route path='/payments' element={<Payments/>}/>
       <Route path='/pet' element={<Petcards/>}/>
+      <Route path='/loading' element={<Loading/>}/>
     </Routes>
   )
 }
