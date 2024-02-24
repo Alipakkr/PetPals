@@ -63,7 +63,7 @@ const Address = () => {
         </div>
         <hr />
         <div>
-          <h2>Payable Amount</h2>
+          <h2>PayAble Amount</h2>
           <h2 id="paytm"> $660 </h2>
         </div>
         <hr />
@@ -73,5 +73,4 @@ const Address = () => {
     </div>
   );
 };
-
 export default Address;
