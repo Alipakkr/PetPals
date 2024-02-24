@@ -7,15 +7,15 @@ Welcome to our Pet Adoption Website, where the journey to find your perfect furr
 Frontend | Backend | Fullstack
 
 ## Deplolyed App
-Frontend: https://deployed-site.whatever
-Backend: https://petpals-2z52.onrender.com
-Database: https://deployed-site.whatever
+- Frontend: https://deployed-site.whatever
+- Backend: https://petpals-2z52.onrender.com
+- Database: https://deployed-site.whatever
 
 ## Directory Structure
 my-app/
-├─ backend/
-├─ frontend/
-│  ├─ ...
+ - ├─ backend/
+ - ├─ frontend/
+ - ├─ ...
 
 ## Video Walkthrough of the project
 Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
@@ -50,7 +50,6 @@ Provide instructions and examples on how to use your project.
 # Example
 ```
 
-Include screenshots as necessary.
 
 ## Credentials
 Provide user credentials for autheticated pages
@@ -65,8 +64,6 @@ POST /api/items - create a new item
 
 
 ## Technology Stack
-List and provide a brief overview of the technologies used in the project.
-
 - Node.js
 - Express.js
 - MongoDB
