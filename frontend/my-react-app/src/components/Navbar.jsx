@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./styles/Navbar.css";
+import "./styles/navbar.css";
 import petlogo from "../Assests/petlogonew.png";
 
 
