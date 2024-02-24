@@ -72,3 +72,20 @@ POST /api/items - create a new item
 - React.js
 - Tailwind
 - Json-Server
+
+## Team Members 
+### Alipa(Team Lead )
+[![profile](https://img.shields.io/badge/Github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Alipakkr)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alipa-55b365285/)
+
+### M Laxminarayan Reddy
+[![profile](https://img.shields.io/badge/Github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/imlnr)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alipa-55b365285/)
+
+### Nirmal Patel 
+[![profile](https://img.shields.io/badge/Github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/nirmalpatel26)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alipa-55b365285/)
+
