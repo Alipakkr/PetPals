@@ -5,7 +5,7 @@ const initialState = {
     isLoading: false,
     isError: false,
     theme: 'light',
-    isLoggedIn: false,
+    isLoggedIn: true,
     user: {},
     pet: {}
 }

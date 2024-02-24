@@ -9,7 +9,7 @@ const Petadoption = () => {
     const [filters, setFilters] = useState({
         gender: '',
         color: [],
-        size: [],
+        age: [],
         pettype: ''
     });
 
@@ -33,10 +33,10 @@ const Petadoption = () => {
     };
 
     const handleSizeChange = (size) => {
-        const updatedSize = filters.size.includes(size)
-            ? filters.size.filter((s) => s !== size)
-            : [...filters.size, size];
-        setFilters({ ...filters, size: updatedSize });
+        const updatedSize = filters.age.includes(size)
+            ? filters.age.filter((s) => s !== size)
+            : [...filters.age, size];
+        setFilters({ ...filters, age: updatedSize });
     };
 
     const handlepettypeChange = (pettype) => {
@@ -46,9 +46,7 @@ const Petadoption = () => {
     return (
         <div className="adopt-main-container">
             <div className="adoption-container">
-                {/* Filtering options */}
                 <div className="filtering-part">
-                    {/* Gender filter */}
                     <div className="filter-item">
                         <p>Gender</p>
                         <div className="filter-inn">
@@ -64,7 +62,6 @@ const Petadoption = () => {
                         </div>
                     </div>
                     <div className="hr"></div>
-                    {/* Color filter */}
                     <div className="filter-item">
                         <p>Color</p>
                         <div className="filter-inn">
@@ -85,22 +82,21 @@ const Petadoption = () => {
                         </div>
                     </div>
                     <div className="hr"></div>
-                    {/* Size filter */}
                     <div className="filter-item">
                         <p>Size</p>
                         <div className="filter-inn">
                             <label>
-                                <input type="checkbox" checked={filters.size.includes('puppy')} onChange={() => handleSizeChange('puppy')} />
+                                <input type="checkbox" checked={filters.age.includes('puppy')} onChange={() => handleSizeChange('puppy')} />
                                 puppy
                             </label>
                             <br />
                             <label>
-                                <input type="checkbox" checked={filters.size.includes('young')} onChange={() => handleSizeChange('young')} />
+                                <input type="checkbox" checked={filters.age.includes('young')} onChange={() => handleSizeChange('young')} />
                                 young
                             </label>
                             <br />
                             <label>
-                                <input type="checkbox" checked={filters.size.includes('adult')} onChange={() => handleSizeChange('adult')} />
+                                <input type="checkbox" checked={filters.age.includes('adult')} onChange={() => handleSizeChange('adult')} />
                                 Adult
                             </label>
                         </div>
@@ -132,7 +128,6 @@ const Petadoption = () => {
                     </div>
                 </div>
                 <div className='disp'>
-                    {/* Displaying pets */}
                     {isLoading ? <Loading /> :
                         <div className="displaying-part">
                             {store.map((ele) => <Petcards key={ele._id} para={ele} />)}

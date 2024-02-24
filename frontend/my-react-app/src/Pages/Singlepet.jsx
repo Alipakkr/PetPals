@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Loading from '../components/Loading';
 import { GetSingleData } from '../Redux/action';
 import './styles/singlepet.css'
 
 const Singlepet = () => {
     const { petid } = useParams();
+    const navigate = useNavigate();
     console.log(petid);
     const state = useSelector((store) => store.pet);
     console.log(state);
@@ -15,6 +16,9 @@ const Singlepet = () => {
     useEffect(() => {
         dispatch(GetSingleData(petid))
     }, [petid]);
+    const handleClick = ()=>{
+        navigate('/address');
+    }
     return (
         <div className='main-ind-pet'>
             {loading ? <Loading /> :
@@ -31,7 +35,7 @@ const Singlepet = () => {
                         <p className='about-left span-cls'>About</p>
                         <p className='about-left'>{`Introducing ${state.name}, a stunning ${state.breed} seeking a loving forever home. With a heart full of love, he/she adores human companionship and gets along famously with other pets. ${state.name}'s delightful personality shines through with his/her unique trait or behavior. Whether it's playtime in the park or cuddles on the couch, he/she is always up for it.`}</p>
                         <p className='about-left'>{`We are reluctantly seeking a new home for ${state.name} due to unforeseen circumstances. We kindly request potential adopters to have the time, space, and resources to provide a loving environment. Adoption fees apply to ensure the best match. If you're ready to welcome a loyal and devoted companion into your life, reach out to us at Your Contact Information. Help ${state.name} find happiness in a forever home!`}</p>
-                        <button>{`Adopt ${state.name}`}</button>
+                        <button onClick={handleClick}>{`Adopt ${state.name}`}</button>
                     </div>
                 </div>
             }

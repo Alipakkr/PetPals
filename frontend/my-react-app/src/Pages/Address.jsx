@@ -33,16 +33,16 @@ const Address = () => {
           <p>Email <span>*</span></p>
           <input id="email" type="text" placeholder="Enter your Mail Address" required />
         </div>
-        <div>
+        {/* <div>
           <select name="address" id="addressType">
             <option value="">Address Type</option>
             <option value="home">Home</option>
             <option value="office">Office</option>
             <option value="others">Others</option>
           </select>
-        </div>
+        </div> */}
         <input type="checkbox" />
-        <p className="inline">I want to subscribe to Voyawander Travels</p>
+        <p className="inline">I want to subscribe to PetPals</p>
         <input type="submit" value="Confirm" />
       </form>
 
@@ -67,8 +67,8 @@ const Address = () => {
           <h2 id="paytm"> $660 </h2>
         </div>
         <hr />
-        <button style={{color:'black',borderRadius:'8px',backgroundColor:'violet',padding:'0% 2%'}}>Confirm Payment</button>
-        {/* <h2 style={{ color: 'deepskyblue' }}></h2> */}
+        {/* <button style={{color:'black',borderRadius:'8px',backgroundColor:'violet',padding:'0% 2%'}}>Confirm Payment</button> */}
+        <h2 style={{ color: 'deepskyblue' }}>Confirm Payment</h2>
       </div>
     </div>
   );
