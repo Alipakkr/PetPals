@@ -7,6 +7,7 @@ import Home from '../Pages/Home'
 import Payments from '../Pages/Payments'
 import Petcards from '../components/Petcards'
 import Loading from '../components/Loading'
+import Singlepet from '../Pages/Singlepet'
 
 const MainRoutes = () => {
   return (
@@ -17,8 +18,9 @@ const MainRoutes = () => {
       <Route path='/' element={<Home/>}/>
       <Route path='/pet-adoption' element={<Petadoption/>}/>
       <Route path='/payments' element={<Payments/>}/>
-      <Route path='/pet' element={<Petcards/>}/>
+      {/* <Route path='/pet' element={<Petcards/>}/> */}
       <Route path='/loading' element={<Loading/>}/>
+      <Route path='/pet/:petid' element={<Singlepet/>}/>
     </Routes>
   )
 }

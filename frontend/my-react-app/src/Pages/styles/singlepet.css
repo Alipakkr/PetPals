@@ -1,0 +1,23 @@
+.main-ind-pet{
+    /* height: 100vh; */
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ind-pet{
+    display: grid;
+    width: 70%;
+    border: 1px solid;
+    margin: 2% 0;
+    /* column-gap: 2%; */
+    grid-template-columns: repeat(2,1fr);
+}
+.img{
+    border: 1px solid;
+}
+.img>img{
+    /* height: 600px; */
+    width: 90%;
+    border-radius: 8px;
+}

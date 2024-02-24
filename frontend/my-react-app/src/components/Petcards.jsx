@@ -1,6 +1,11 @@
 import React from 'react'
 import './styles/petcard.css'
+import { useNavigate } from 'react-router-dom'
 const Petcards = ({para}) => {
+  const navigate = useNavigate();
+  const handleOnclick = ()=>{
+    navigate(`/pet/${para._id}`)
+  }
   return (
     <div className="pet-card">
         <div className="pet-card-inn">
@@ -17,7 +22,7 @@ const Petcards = ({para}) => {
               <p>{para.gender}</p>
             </div>
           </div>
-          <button>Know more</button>
+          <button onClick={handleOnclick}>Know more</button>
         </div>
     </div>
   )
