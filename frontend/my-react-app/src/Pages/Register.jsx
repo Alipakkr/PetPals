@@ -12,7 +12,7 @@ export default function Register() {
         password: '',
         confirmpwd: '',
         location: '',
-        gender: '',
+       gender: '',
       });
     
       const handleChange = (e) => {
