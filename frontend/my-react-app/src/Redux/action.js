@@ -8,7 +8,6 @@ export const fetchPets = (filters) => {
         console.log("fetching pets....");
         dispatch({ type: GET_PETS_REQUEST });
         try {
-            // Construct the URL with filter parameters
             let url = 'https://petpals-2z52.onrender.com/pets/get?';
             for (const key in filters) {
                 if (filters[key]) {
