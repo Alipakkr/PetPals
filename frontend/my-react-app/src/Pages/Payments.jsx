@@ -1,16 +1,20 @@
 import React from 'react';
 import './styles/payments.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Payments = () => {
     const data = useLocation().state;
     console.log(data);
+    const navigate = useNavigate();
+    const handleSubmit = ()=>{
+        navigate('/thankyou')
+    }
     return (
         <div className="payments-div">
             <div className="row">
                 <div className="col-75">
                     <div className="container">
-                        <form action="/action_page.php">
+                        <form onSubmit={handleSubmit}>
 
                             <div className="row">
                                 <div className="col-50">
@@ -67,7 +71,7 @@ const Payments = () => {
                             <label>
                                 <input type="checkbox" defaultChecked="checked" name="sameadr" /> Shipping address same as billing
                             </label>
-                            <input type="submit" value="Continue to checkout" className="btn" />
+                            <input  type="submit" value="Continue to checkout" className="btn" />
                         </form>
                     </div>
                 </div>
