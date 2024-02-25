@@ -12,7 +12,7 @@ export default function Register() {
         email: '',
         password: '',
         confirmpwd: '',
-        location : '',
+        age : '',
        gender: '',
       });
     
@@ -40,14 +40,14 @@ export default function Register() {
             name : formData.name,
             email : formData.email,
             password : formData.password,
-            location : formData.location,
+            age : formData.age,
             gender : formData.gender,
         }
 
-        axios.post("https://cute-erin-tick-hat.cyclic.cloud/user/register", obj)
+        axios.post("https://petpals-2z52.onrender.com/users/register", obj)
         .then((res)=>{
             toast({
-                title: `${res.data.message}`,
+                title: `${res.data.msg}`,
                 status: "success",
                 isClosable: true,
             })
@@ -115,7 +115,7 @@ export default function Register() {
         <input
           type="text"
           name="age"
-          value={formData.location}
+          value={formData.age}
           onChange={handleChange}
           placeholder='age'
         />
