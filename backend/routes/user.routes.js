@@ -38,13 +38,16 @@ userRouter.post("/login", async (req, res) => {
     const { email, password } = req.body;
     try {
         const user = await UserModel.findOne({ email });
+        if(!user){
+            return res.status(402).json({error:"User Does Not Exist"})
+        }
         bcrypt.compare(password, user.password, (err, result) => {
             if (result) {
                 const token = jwt.sign({ userID: user._id, author: user.Name }, "masai", { expiresIn: '7d' });
                 res.send({ "msg": "Login successful!", token });
             } else {
                 console.log(err);
-                res.status(401).send({ "msg": "Wrong Credentials", err });
+                res.status(403).send({ "error": "Wrong Credentials", err });
             }
         });
     } catch (err) {
