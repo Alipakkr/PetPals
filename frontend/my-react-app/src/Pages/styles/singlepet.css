@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(128, 128, 128, 0.13);
+    min-height: 100vh;
 }
 
 .ind-pet {

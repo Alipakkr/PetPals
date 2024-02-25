@@ -6,6 +6,7 @@ import MainRoutes from './AllRoutes/MainRoutes';
 import {Navbar} from './components/Navbar';
 import { store } from './Redux/store';
 import { ChakraProvider } from '@chakra-ui/react';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <div className="App">
           <Navbar />
           <MainRoutes />
+          <Footer/>
         </div>
       </ChakraProvider>
       </BrowserRouter>
