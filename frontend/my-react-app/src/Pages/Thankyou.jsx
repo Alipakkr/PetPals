@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './styles/thankyou.css'
 import { useNavigate } from 'react-router-dom'
 
 const Thankyou = () => {
     const navigate = useNavigate();
-    setTimeout(() => {
-        navigate('/')
-    }, 5000);
+    useEffect(()=>{
+        setTimeout(() => {
+            navigate('/')
+        }, 5000);
+    },[])
 
     return (
         <div id='thankyou'>
