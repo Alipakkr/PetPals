@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import login_picture from "../Assets/login_picture.jpg"
-import "./Register.css"
+import login_picture from "../Assests/login_picture.jpg"
+// import "./Register.css"
+import './styles/Register.css'
 import { useToast } from '@chakra-ui/react';
 import axios from 'axios';
 export default function Register() {
@@ -113,10 +114,10 @@ export default function Register() {
         />
         <input
           type="text"
-          name="location"
+          name="age"
           value={formData.location}
           onChange={handleChange}
-          placeholder='Location'
+          placeholder='age'
         />
         <select
           name="gender"
