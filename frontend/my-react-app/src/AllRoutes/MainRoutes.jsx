@@ -11,6 +11,7 @@ import Singlepet from '../Pages/Singlepet'
 import PrivateRoute from './PrivateRoute'
 import Address from '../Pages/Address'
 import { About } from '../Pages/About'
+import { Contact } from '../Pages/Contact'
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<About/>}/>
+      <Route path='/contact' element={<Contact/>}/>
       <Route path='/pet-adoption' element={<Petadoption/>}/>
       <Route path='/payments' element={<Payments/>}/>
       {/* <Route path='/pet' element={<Petcards/>}/> */}
