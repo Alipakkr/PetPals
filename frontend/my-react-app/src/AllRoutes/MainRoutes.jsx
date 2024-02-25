@@ -10,6 +10,7 @@ import Loading from '../components/Loading'
 import Singlepet from '../Pages/Singlepet'
 import PrivateRoute from './PrivateRoute'
 import Address from '../Pages/Address'
+import { About } from '../Pages/About'
 
 const MainRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
       <Route path='/pet-adoption' element={<Petadoption/>}/>
       <Route path='/payments' element={<Payments/>}/>
       {/* <Route path='/pet' element={<Petcards/>}/> */}
