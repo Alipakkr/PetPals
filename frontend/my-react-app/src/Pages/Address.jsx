@@ -18,7 +18,7 @@ const Address = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/payments');
+        navigate('/payments',{state});
     }
 
     const handleInputChange = (e) => {
@@ -28,7 +28,6 @@ const Address = () => {
             [id]: value
         }));
     }
-
     useEffect(() => {
         console.log(state);
     }, [state])
@@ -66,7 +65,7 @@ const Address = () => {
                 </div>
                 <input type="checkbox" required />
                 <p className="inline">I want to subscribe to PetPals</p>
-                <input type="submit" value="Confirm" />
+                <input  type="submit" value="Confirm" />
             </form>
 
             <div id="orderSummary">
@@ -81,12 +80,12 @@ const Address = () => {
                 </div>
                 <div>
                     <p className="gray">GST*</p>
-                    <p id="totaldiscount" className="green">{`$ ${(state.price*0.28).toFixed(2)}`}</p>
+                    <p id="totaldiscount" className="green">{`$ ${(state.price * 0.28).toFixed(2)}`}</p>
                 </div>
                 <hr />
                 <div>
                     <h2>Payable Amount</h2>
-                    <h2 id="paytm"> {(state.price+state.price*0.28).toFixed(2)} </h2>
+                    <h2 id="paytm"> {(state.price + state.price * 0.28).toFixed(2)} </h2>
                 </div>
                 <hr />
                 <h2 style={{ color: 'deepskyblue' }}>Press Confirm for payment.</h2>
