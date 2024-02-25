@@ -6,9 +6,12 @@ import petlogo from "../Assests/petlogonew.png";
 
 import cart_icon from "../Assests/cart_icon.png"
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 export const Navbar = () => {
+  const state = useSelector((state)=>state.isLoggedIn);
+  console.log(state);
 
   const [menu,setMenu]=useState("home")
   return (
@@ -29,9 +32,7 @@ export const Navbar = () => {
         <Link to="/login"><button>Login</button></Link>
         <Link to='/cart'><img src={cart_icon} alt="cart-icon" /></Link>
         <div className="nav-cart-count">0</div>
-      </div>
-
-      
+      </div>      
     </div>
   );
 };
