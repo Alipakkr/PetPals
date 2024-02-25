@@ -301,7 +301,7 @@ footer>p,
 .iconsection {
     display: flex;
     gap: 10px;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: baseline;
     margin-top: 170px;
     width: 50%;
