@@ -27,7 +27,7 @@ body{
   width: 100vw;
   display:flex;
   border: 1px solid #e9ecef;
-  border-radius: 5px;
+  border-radius: 10px;
   /* box-shadow: 1px 3px 10px #e9ecef; */
   background-color: white;
 }

@@ -4,9 +4,11 @@ import login_picture from "../Assests/login_picture.jpg"
 import './styles/Register.css'
 import { useToast } from '@chakra-ui/react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export default function Register() {
     
-    const toast = useToast()
+    const toast = useToast();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -51,6 +53,9 @@ export default function Register() {
                 status: "success",
                 isClosable: true,
             })
+            setTimeout(() => {
+              navigate('/')
+            }, 2000);
         })
         .catch((err)=>{
             if(err.response.status){

@@ -14,11 +14,11 @@ export default function Login() {
   const navigate = useNavigate()
 
   const onSubmit = (data) => {
-    axios.post("https://cute-erin-tick-hat.cyclic.cloud/user/login", data)
+    axios.post("https://petpals-2z52.onrender.com/users/login", data)
       .then((res) => {
         // AuthLoginFunc()
         toast({
-          title: res.data.message,
+          title: res.data.msg,
           status: 'success',
           duration: 2000,
           isClosable: true,
@@ -78,16 +78,3 @@ export default function Login() {
   )
 }
 
-{/* <h2>Sign In</h2>
-                <span>register and enjoy the service</span>
-
-                <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
-                    <input type="text" {...("username")} placeholder='username' />
-                    <input type="text" {...register("password")} placeholder='password' />
-                    <input type="text" {...register("confirmpwd")} placeholder='confirm password' />
-                    
-                    <input type="text" {...register("mobile", { required : true, maxLength: 10 })} placeholder='mobile number' />
-                    {errors.mobile?.type === "required" && "Mobile Number is required"}
-                    {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
-             
-                </form> */}
