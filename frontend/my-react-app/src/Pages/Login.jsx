@@ -6,30 +6,31 @@ import { Link, useNavigate } from 'react-router-dom';
 // import { authContext } from '../context/AuthContext';   
 import axios from 'axios';
 import { useToast } from '@chakra-ui/react';
-import { useDispatch } from 'react-redux';
-import { LOGIN_REQUEST } from '../Redux/action-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, get_USER_SUCCESS } from '../Redux/action-types';
 export default function Login() {
-
-  // let {AuthLoginFunc,AuthNameFunc} = useContext(authContext)
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
   const toast = useToast()
   const navigate = useNavigate()
   const dispatch = useDispatch();
-
+  const state = useSelector(state=>state);
   const onSubmit = (data) => {
     dispatch({type:LOGIN_REQUEST});
     axios.post("https://petpals-2z52.onrender.com/users/login", data)
       .then((res) => {
         // AuthLoginFunc()
         console.log(res);
+        dispatch({type:LOGIN_SUCCESS});
         toast({
           title: res.data.msg,
           status: 'success',
           duration: 2000,
           isClosable: true,
         })
+        dispatch({type:get_USER_SUCCESS,payload:res.data.user});
         // AuthNameFunc(res.data.userName)
-        localStorage.setItem("token", JSON.stringify(res.data.token))
+        console.log(res.data);
+        localStorage.setItem("token", res.data.token)
         setTimeout(() => {
           navigate("/")
         }, 1500);
@@ -43,6 +44,7 @@ export default function Login() {
             isClosable: true,
           })
         }
+        dispatch({type:LOGIN_FAILURE})
 
         if (err.response.status == 403) {
           return toast({
@@ -55,8 +57,6 @@ export default function Login() {
 
       })
   }
-
-
   return (
     <div className='Regis'>
       <section>

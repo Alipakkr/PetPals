@@ -1,6 +1,6 @@
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 16px;
     box-shadow: 0 1px 3px -2px rgb(2, 0, 6);
 }
@@ -10,7 +10,7 @@
     gap: 10px;
 }
 .nav-logo img{
-    width: 40%;
+    width: 30%;
 }
 .nav-logo p{
     font-size: 38px;
@@ -64,6 +64,9 @@
     font-weight: 500;
     background: white;
     cursor: pointer;
+}
+.username{
+    font-size: 25px;
 }
 
 .nav-login-cart button:active{

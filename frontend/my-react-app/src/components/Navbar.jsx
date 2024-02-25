@@ -5,13 +5,51 @@ import petlogo from "../Assests/petlogonew.png";
 
 
 import cart_icon from "../Assests/cart_icon.png"
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { LOGOUT_FAILURE, LOGOUT_REQUEST, LOGOUT_SUCCESS } from "../Redux/action-types";
 
 
 export const Navbar = () => {
-  const state = useSelector((state)=>state.isLoggedIn);
-  console.log(state);
+  const login = useSelector((state)=>state.isLoggedIn);
+  const user = useSelector((state)=>state.user);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleUserName = ()=>{
+    // if(user.name){
+      const name = user.name?.split(" ")[0] || "";
+      // console.log(name);
+      return name
+    // }
+  }
+
+  const handleLogout = async () => {
+    dispatch({type:LOGOUT_REQUEST});
+    const token = localStorage.getItem("token");
+    console.log(token);
+    try {
+      const response = await fetch("https://petpals-2z52.onrender.com/users/logout", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+
+      if (response.ok) {
+        // localStorage.removeItem("token");
+        dispatch({ type: LOGOUT_SUCCESS });
+        navigate('/')
+      } else {
+        console.error("Logout request failed");
+      }
+    } catch (error) {
+      dispatch({type:LOGOUT_FAILURE})
+      console.error("Error occurred during logout:", error);
+    }
+  };
 
   const [menu,setMenu]=useState("home")
   return (
@@ -29,9 +67,9 @@ export const Navbar = () => {
         <li onClick={()=>{setMenu("contect")}}><Link style={{textDecoration:"none"}}to="/contact" smooth duration={500}>Contact</Link> {menu==="contect"?<hr />:<></>}</li>
       </ul>
       <div className="nav-login-cart">
-        <Link to="/login"><button>Login</button></Link>
-        <Link to='/cart'><img src={cart_icon} alt="cart-icon" /></Link>
-        <div className="nav-cart-count">0</div>
+        {login?<span className="username">{`Hi, ${handleUserName()}`}</span>:<Link to="/login"><button>Login</button></Link>}
+        {login?<button onClick={handleLogout}>Logout</button>:<Link to="/register"><button>signup</button></Link>}
+        {/* <div className="nav-cart-count">0</div> */}
       </div>      
     </div>
   );
