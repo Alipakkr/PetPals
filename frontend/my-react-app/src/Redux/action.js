@@ -46,3 +46,8 @@ export const GetSingleData = (petid)=>{
         }
     }
 }
+
+
+export const validateLogin = (user)=>{
+    const {email,pass} = user;
+}

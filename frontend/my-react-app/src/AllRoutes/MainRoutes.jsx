@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Login from '../Pages/Login'
-import Signup from '../Pages/Signup'
+// import Signup from '../Pages/Regis'
 import Petadoption from '../Pages/Petadoption'
 import Home from '../Pages/Home'
 import Payments from '../Pages/Payments'
@@ -12,13 +12,14 @@ import PrivateRoute from './PrivateRoute'
 import Address from '../Pages/Address'
 import { About } from '../Pages/About'
 import { Contact } from '../Pages/Contact'
+import Register from '../Pages/Register'
 
 const MainRoutes = () => {
   return (
     <Routes>
 
       <Route path='/login' element={<Login/>}/>
-      <Route path='/signup' element={<Signup/>}/>
+      <Route path='/register' element={<Register/>}/>
       <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' element={<Contact/>}/>

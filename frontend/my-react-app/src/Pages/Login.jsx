@@ -7,7 +7,6 @@ import './styles/login.css'
 const Login = () => {
   const loginHandler = (e) => {
     e.preventDefault();
-    // setFormErrors(validateForm(user));
     setIsSubmit(true);
   };
   const navigate = useNavigate();
@@ -25,6 +24,7 @@ const Login = () => {
       [name]: value,
     });
   };
+  console.log("user",user);
   return (
     <div className='login-container'>
     <div className={"login"}>
