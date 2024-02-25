@@ -11,7 +11,7 @@ export default function Register() {
         email: '',
         password: '',
         confirmpwd: '',
-        location: '',
+        location : '',
        gender: '',
       });
     
