@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Flex,Box,  Input, Button, useToast, Text, Image } from "@chakra-ui/react"
 import axios from "axios"
-import { adminContext } from '../context/AdminAuthContext'
+// import { adminContext } from '../context/AdminAuthContext'
 import { Navigate, useNavigate } from 'react-router-dom';
 export const AdminLogin = () => {
- let {adminLogin,adminLoginFunc} = useContext(adminContext)
   const [email,setemail] = useState("")
   const [password,setpassword] = useState("")
   const toast = useToast()
@@ -17,10 +16,10 @@ export const AdminLogin = () => {
       password:password
     }
 
-    axios.post("https://cute-erin-tick-hat.cyclic.cloud/admin/login", obj)
+    axios.post("https://petpals-2z52.onrender.com/admin/login", obj)
     .then((res)=>{
       if(res.status===200){
-        adminLoginFunc()
+        // adminLoginFunc()
         toast({
           title: 'Successfully Logged In',
           description: 'Welcome Admin',

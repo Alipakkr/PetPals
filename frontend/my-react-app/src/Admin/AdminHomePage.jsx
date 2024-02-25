@@ -12,7 +12,7 @@ import { adminContext } from '../context/AdminAuthContext'
 
 export const AdminHomePage = () => {
   const toast = useToast()
-  const { adminLogoutFunc } = useContext(adminContext)
+  // const { adminLogoutFunc } = useContext(adminContext)
   const [users, setUsers] = useState([])
   const [userState, setUserState] = useState(false)
   const [posts, setPosts] = useState([])

@@ -66,12 +66,12 @@ export default function Login() {
             <span className="Sign1">login to meet your furry friend</span>
 
             <form id='form' className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-              <input type="email" {...register("email", { required: true })} placeholder='Username' />
+              <input type="email" {...register("email", { required: true })} placeholder='email' />
               {errors.email && <span style={{ color: "red" }}>
                 *Email* is mandatory </span>}
               <input type="password" {...register("password")} placeholder='Password' />
-              <button className='btn'>Sign In</button>
-              <Link to="/adminLogin"><h1>Admin ?</h1></Link>
+              <button className='btn'>Log In</button>
+              <Link to="/admin"><h1>Admin ?</h1></Link>
             </form>
           </div>
           <div className="col-2">

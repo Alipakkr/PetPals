@@ -13,22 +13,26 @@ import Address from '../Pages/Address'
 import { About } from '../Pages/About'
 import { Contact } from '../Pages/Contact'
 import Register from '../Pages/Register'
+import Thankyou from '../Pages/Thankyou'
+import { AdminLogin } from '../Admin/AdminLogin'
 
 const MainRoutes = () => {
   return (
     <Routes>
 
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/register' element={<Register/>}/>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/contact' element={<Contact/>}/>
-      <Route path='/pet-adoption' element={<Petadoption/>}/>
-      <Route path='/payments' element={<Payments/>}/>
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/pet-adoption' element={<Petadoption />} />
+      <Route path='/payments' element={<PrivateRoute><Payments /></PrivateRoute>} />
       {/* <Route path='/pet' element={<Petcards/>}/> */}
-      <Route path='/loading' element={<Loading/>}/>
-      <Route path='/pet/:petid' element={<PrivateRoute><Singlepet/></PrivateRoute>}/>
-      <Route path='/address' element={<Address/>}/>
+      <Route path='/loading' element={<Loading />} />
+      <Route path='/pet/:petid' element={<PrivateRoute><Singlepet /></PrivateRoute>} />
+      <Route path='/address' element={<PrivateRoute><Address /></PrivateRoute>} />
+      <Route path='/thankyou' element={<PrivateRoute><Thankyou /></PrivateRoute>} />
+      <Route path='/admin' element={<AdminLogin/>}/>
     </Routes>
   )
 }
