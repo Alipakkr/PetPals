@@ -7,12 +7,10 @@ import { DogsCard } from "./DogsCard"
 import { CatsCard } from "./CatsCard"
 import { FaDog, FaUserAlt, FaCat, } from "react-icons/fa"
 import { FaRightFromBracket } from "react-icons/fa6"
-import { Contribute } from './Contribute'
-import { adminContext } from '../context/AdminAuthContext'
+import { Contribute } from './Contribute' 
 
 export const AdminHomePage = () => {
   const toast = useToast()
-  // const { adminLogoutFunc } = useContext(adminContext)
   const [users, setUsers] = useState([])
   const [userState, setUserState] = useState(false)
   const [posts, setPosts] = useState([])
@@ -189,7 +187,7 @@ export const AdminHomePage = () => {
   }
 
   let handleLogout = () => {
-    adminLogoutFunc()
+    // adminLogoutFunc()
   }
 
   return (

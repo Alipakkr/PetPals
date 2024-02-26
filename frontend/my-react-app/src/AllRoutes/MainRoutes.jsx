@@ -15,6 +15,7 @@ import { Contact } from '../Pages/Contact'
 import Register from '../Pages/Register'
 import Thankyou from '../Pages/Thankyou'
 import { AdminLogin } from '../Admin/AdminLogin'
+import { AdminHomePage } from '../Admin/AdminHomePage'
 
 const MainRoutes = () => {
   return (
@@ -33,6 +34,7 @@ const MainRoutes = () => {
       <Route path='/address' element={<PrivateRoute><Address /></PrivateRoute>} />
       <Route path='/thankyou' element={<PrivateRoute><Thankyou /></PrivateRoute>} />
       <Route path='/admin' element={<AdminLogin/>}/>
+      <Route path='/adminHome' element={<AdminHomePage/>}/>
     </Routes>
   )
 }
