@@ -1,7 +1,7 @@
 # PetPals: Pet Adoption and Care Platform
 
 ## Introduction
-Welcome to our Pet Adoption Website, where the journey to find your perfect furry companion begins. We've created a platform dedicated to connecting loving homes with deserving animals, all while supporting and empowering animal welfare organizations.
+Welcome to PetPals, your go-to Pet Adoption Website, dedicated to facilitating the journey of connecting loving homes with deserving animals. Our platform is designed to support and empower animal welfare organizations, ensuring a smooth and caring adoption process.
 
 ## Project Type
 Frontend | Backend | Fullstack
@@ -15,7 +15,7 @@ Frontend | Backend | Fullstack
 my-app/
  - ├─ backend/
  - ├─ frontend/
- - ├─ ...
+
 
 ## Video Walkthrough of the project
 Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
@@ -31,8 +31,6 @@ Features
 -  Adoption Requests: Initiate adoption requests seamlessly and efficiently, ensuring a smooth and caring process.
 -  Admin Controls: Empower organizations with robust admin controls for effective management and coordination.
 
-## design decisions or assumptions
-List your design desissions & assumptions
 
 ## Installation & Getting started
 Detailed instructions on how to install, configure, and get the project running. For BE/FS projects, guide the reviewer how to check mongodb schema etc.
@@ -50,17 +48,6 @@ Provide instructions and examples on how to use your project.
 # Example
 ```
 
-
-## Credentials
-Provide user credentials for autheticated pages
-
-## APIs Used
-If your application relies on external APIs, document them and include any necessary links or references.
-
-## API Endpoints
-In case of Backend Applications provide a list of your API endpoints, methods, brief descriptions, and examples of request/response.
-GET /api/items - retrieve all items
-POST /api/items - create a new item
 
 
 ## Technology Stack
