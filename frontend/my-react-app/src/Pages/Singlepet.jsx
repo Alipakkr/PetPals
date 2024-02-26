@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import Loading from '../components/Loading';
 import { GetSingleData } from '../Redux/action';
 import './styles/singlepet.css'
 
 const Singlepet = () => {
+    const data = useLocation().state;
+    // console.log(data);
     const { petid } = useParams();
     const navigate = useNavigate();
-    console.log(petid);
     const propdata = useSelector((store)=> store.pet);
     const state = useSelector((store) => store.pet);
-    console.log(state);
     const loading = useSelector((store) => store.isLoading);
     const dispatch = useDispatch();
     useEffect(() => {

@@ -1,0 +1,21 @@
+#thankyou{
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+#tq-header>h1{
+    font-size: 100px;
+}
+.main-content>p{
+    font-size: 20px;
+    text-align: center;
+}
+.tick{
+    color: #47cf73;
+    font-size: 100px;
+}

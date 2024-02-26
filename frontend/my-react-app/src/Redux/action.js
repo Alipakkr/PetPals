@@ -22,7 +22,7 @@ export const fetchPets = (filters) => {
             }
 
             let data = await axios.get(url);
-            console.log(data.data);
+            // console.log(data.data);
             dispatch({ type: GET_PETS_SUCCESS, payload: data.data.pets });
         } catch (error) {
             console.log(error);
@@ -45,4 +45,9 @@ export const GetSingleData = (petid)=>{
             dispatch({type:GET_SINGLE_PET_FAILURE})
         }
     }
+}
+
+
+export const validateLogin = (user)=>{
+    const {email,pass} = user;
 }

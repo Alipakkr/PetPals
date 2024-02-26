@@ -1,8 +1,8 @@
 const express = require('express');
 const AdminAuth = require('../middlewares/AdminAuth');
 const jwt = require('jsonwebtoken');
-const UserModel = require('../Model/UserModel');
-const BlockModel = require('../Model/BlockModel');
+const UserModel = require('../models/user.models');
+const BlockModel = require('../models/blacklist.model');
 const adminRoute = express.Router()
 adminRoute.post("/login", AdminAuth ,async(req,res)=>{
     try {

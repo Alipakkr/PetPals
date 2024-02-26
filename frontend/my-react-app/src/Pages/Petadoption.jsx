@@ -6,12 +6,15 @@ import { fetchPets } from '../Redux/action';
 import Loading from '../components/Loading';
 
 const Petadoption = () => {
-    const [filters, setFilters] = useState({
+    const initialFilter = {
         gender: '',
         color: [],
         age: [],
         pettype: ''
-    });
+    }
+    const [filters, setFilters] = useState(
+        initialFilter
+    );
 
     const store = useSelector((store) => store.pets);
     const isLoading = useSelector((store) => store.isLoading);
@@ -42,6 +45,10 @@ const Petadoption = () => {
     const handlepettypeChange = (pettype) => {
         setFilters({ ...filters, pettype });
     };
+
+    const handlefilterReset = () => {
+        setFilters(initialFilter);
+    }
 
     return (
         <div className="adopt-main-container">
@@ -125,6 +132,10 @@ const Petadoption = () => {
                                 Birds
                             </label>
                         </div>
+                    </div>
+                    <div className="hr"></div>
+                    <div className="filter-item">
+                        <button onClick={handlefilterReset}>Reset Filter</button>
                     </div>
                 </div>
                 <div className='disp'>
