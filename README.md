@@ -56,14 +56,6 @@ cd my-project
 npm start
 ```
 
-## Usage
-Provide instructions and examples on how to use your project.
-
-```bash
-# Example
-```
-
-
 
 ## Technology Stack
 - Node.js
