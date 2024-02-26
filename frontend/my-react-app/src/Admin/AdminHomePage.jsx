@@ -8,6 +8,9 @@ import { CatsCard } from "./CatsCard"
 import { FaDog, FaUserAlt, FaCat, } from "react-icons/fa"
 import { FaRightFromBracket } from "react-icons/fa6"
 import { Contribute } from './Contribute' 
+import { useDispatch } from 'react-redux'
+import { LOGOUT_FAILURE, LOGOUT_REQUEST, LOGOUT_SUCCESS } from '../Redux/action-types'
+import { useNavigate } from 'react-router-dom'
 
 export const AdminHomePage = () => {
   const toast = useToast()
@@ -22,6 +25,8 @@ export const AdminHomePage = () => {
   const [formState, setFormState] = useState(false)
   const [currentPage, setCurrentPage] = useState(1);
   const [page, setPage] = useState(1)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // getUserData()
@@ -186,9 +191,32 @@ export const AdminHomePage = () => {
       })
   }
 
-  let handleLogout = () => {
-    // adminLogoutFunc()
-  }
+  const handleLogout = async () => {
+    dispatch({type:LOGOUT_REQUEST});
+    const token = localStorage.getItem("token");
+    console.log(token);
+    try {
+      const response = await fetch("https://petpals-2z52.onrender.com/users/logout", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+
+      if (response.ok) {
+        // localStorage.removeItem("token");
+        dispatch({ type: LOGOUT_SUCCESS });
+        navigate('/')
+      } else {
+        console.error("Logout request failed");
+      }
+    } catch (error) {
+      dispatch({type:LOGOUT_FAILURE})
+      console.error("Error occurred during logout:", error);
+    }
+  };
 
   return (
     <div style={{ backgroundColor: "#ffffff", paddingTop: "70px" }}>
