@@ -2,6 +2,23 @@
 
 ## Introduction
 Welcome to PetPals, your go-to Pet Adoption Website, dedicated to facilitating the journey of connecting loving homes with deserving animals. Our platform is designed to support and empower animal welfare organizations, ensuring a smooth and caring adoption process.
+Features:
+
+## User registration and authentication: Allow users to create accounts, log in, and view their profiles.
+## Admin:
+Manage user accounts and profiles, CRUD for the users
+Manage the pet listings, CRUD for the pet listings
+
+## User/Potential Adopter:
+
+Pet search: Search for pets by various criteria such as species, breed, age, and location.
+Adoption application: Apply for the adoption of a pet they are interested in by filling out an application form that includes information about their living situation, previous pet ownership experience, and reason for adopting.
+
+## ANIMAL SHELTERS AND PET ADOPTION AGENCIES:
+
+Pet listings: List pets available for adoption, including photos, descriptions, and adoption requirements for potential adopters to view.
+Review adoption applications submitted by potential adopters for pets listed on the platform.
+Approve or reject adoption applications based on the organization's policies and criteria.
 
 ## Project Type
 Frontend | Backend | Fullstack
