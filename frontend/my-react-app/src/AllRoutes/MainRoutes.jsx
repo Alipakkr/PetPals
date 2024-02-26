@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Login from '../Pages/Login'
 // import Signup from '../Pages/Regis'
 import Petadoption from '../Pages/Petadoption'
@@ -16,6 +16,7 @@ import Register from '../Pages/Register'
 import Thankyou from '../Pages/Thankyou'
 import { AdminLogin } from '../Admin/AdminLogin'
 import { AdminHomePage } from '../Admin/AdminHomePage'
+import Notfound from '../Pages/Notfound'
 
 const MainRoutes = () => {
   return (
@@ -34,7 +35,9 @@ const MainRoutes = () => {
       <Route path='/address' element={<PrivateRoute><Address /></PrivateRoute>} />
       <Route path='/thankyou' element={<PrivateRoute><Thankyou /></PrivateRoute>} />
       <Route path='/admin' element={<AdminLogin/>}/>
+      <Route path='/404' element={<Notfound/>}/>
       <Route path='/adminHome' element={<AdminHomePage/>}/>
+      <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
   )
 }
