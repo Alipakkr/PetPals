@@ -2,7 +2,14 @@
 
 ## Introduction
 Welcome to PetPals, your go-to Pet Adoption Website, dedicated to facilitating the journey of connecting loving homes with deserving animals. Our platform is designed to support and empower animal welfare organizations, ensuring a smooth and caring adoption process.
-Features:
+
+## Features
+-  Pet Searches: Explore a diverse range of adorable pets ready to become a part of your family.
+-  User Accounts: Create personalized profiles to track your favorite pets, adoption history, and preferences.
+-  Wish Lists: Save and organize your desired pets, making it easier to find your ideal match.
+-  Adoption Requests: Initiate adoption requests seamlessly and efficiently, ensuring a smooth and caring process.
+-  Admin Controls: Empower organizations with robust admin controls for effective management and coordination.
+
 
 ## User registration and authentication: Allow users to create accounts, log in, and view their profiles.
 ## Admin:
@@ -39,15 +46,6 @@ Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
 
 ## Video Walkthrough of the codebase
 Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
-
-## Features
-Features
--  Pet Searches: Explore a diverse range of adorable pets ready to become a part of your family.
--  User Accounts: Create personalized profiles to track your favorite pets, adoption history, and preferences.
--  Wish Lists: Save and organize your desired pets, making it easier to find your ideal match.
--  Adoption Requests: Initiate adoption requests seamlessly and efficiently, ensuring a smooth and caring process.
--  Admin Controls: Empower organizations with robust admin controls for effective management and coordination.
-
 
 ## Installation & Getting started
 Detailed instructions on how to install, configure, and get the project running. For BE/FS projects, guide the reviewer how to check mongodb schema etc.
