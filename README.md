@@ -31,7 +31,7 @@ Approve or reject adoption applications based on the organization's policies and
 Frontend | Backend | Fullstack
 
 ## Deplolyed App
-- Frontend: https://deployed-site.whatever
+- Frontend: https://petpalscare.netlify.app
 - Backend: https://petpals-2z52.onrender.com
 - Database: https://deployed-site.whatever
 
