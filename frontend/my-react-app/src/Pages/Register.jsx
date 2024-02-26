@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import login_picture from "../Assests/login_picture.jpg"
+import login_picture from "../Assests/pet-dog2.jpg"
 // import "./Register.css"
 import './styles/Register.css'
 import { useToast } from '@chakra-ui/react';

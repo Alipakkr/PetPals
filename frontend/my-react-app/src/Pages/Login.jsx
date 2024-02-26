@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 // import bgImg from '../assets/img1.jpg'
 import { useForm } from 'react-hook-form';
-import login_picture from "../Assests/login_picture.jpg"
+import login_picture from "../Assests/pet-dog.jpg"
 import { Link, useNavigate } from 'react-router-dom';
 // import { authContext } from '../context/AuthContext';   
 import axios from 'axios';
